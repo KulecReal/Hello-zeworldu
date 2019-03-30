@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang = "eng">
+    <head>
+        <title>Page 2</title>
+        <meta charset="utf-8">
+        <meta name= "description" content ="Time Schedule Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../Home%20page/Home%20page.css">
+        <link rel="icon" href="../Home%20page/Homepageimages/logosurtout.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        
+    <body>
+        <header role="banner">
+         <div id="logo"><a href="../Home%20page/Home%20page.html"><img src="../Home%20page/Homepageimages/logosurtout.png" width="90" height=auto alt="Fencing logo" href="../Home%20page/Home%20page.html"> </a></div>
+        <h1 id="here"> Surtour </h1>
+        <h2> Fencing Club</h2>
+<!--    <nav role="navigation"><br></nav>-->
+    <a href="../Home%20page/Home%20page.html"></a>
+        
+        
+    </header>
+    
+  <div class="sidenav" role="navigation">
+      <a href="../Page%201/New%20Text%20Document1.html">General Information</a>
+  <a href="../Page%202/New%20Text%20Document2.html">Time Schedule Page</a>
+  <a href="../Page0/newdoc.html">Clients</a>
+  <a href="../Page0/newdoc.html">Contact</a>
+  <a href="../Page0/newdoc.html">Contact</a>
+  <a href="../Page0/newdoc.html">Contact</a>
+  <a href="../Page0/newdoc.html">Contact</a>
+      
+</div>
+<!--        <p>I am text:D</p>-->
+        
+<!--        <div id="logo"><img src="../Home%20page/Homepageimages/logosurtout.png" width="90" height=auto alt="Fencing logo"> </div>-->
+<!--
+        <div id="breadcrumbs">
+        <p><a href="../Home%20page/Home%20page.html"><strong>Home</strong></a> &#187;  
+        <strong>
+        <a href="../Page%201/New%20Text%20Document1.html">info</a></strong> &#187; 
+        <strong>timetable</strong></p>
+       </div>
+-->
+       
+        
+<p class="textpage2">Surtout trains 3 times a week and has the following locations, days and class times:</p>
+
+
+<aside role="complementary" class="locations">
+    <h3>Core Locations</h3>
+     <div id="tabContainer">
+    <div id="tabs">
+      <ul>
+        <li id="tab1"><a href="#tabPanel1">HTML</a></li>
+        <li id="tab2"><a href="#tabPanel2">CSS</a></li>
+        <li id="tab3"><a href="#tabPanel3">Javascript</a></li>
+      </ul>
+    </div>
+
+    <div id="containers">
+        <div id="tabPanel1">
+        <h4>Apeldoorn</h4>
+        <p>Study day in Apeldoorn is <strong>Wednesday</strong>. There are two youth groups and one adult.
+            The youth group number 1 trains from <strong>18:30</strong> to <strong>19:30</strong>. This group is up to, and inclusive, 11 year old kids.
+            The youth group number 2 trains from <strong>19:30</strong> to <strong>20:30</strong> This group is up to, and inclusive, 17 year old teenagers.
+            Adult group operates from <strong>20:30</strong> to <strong>21:30</strong>, and is created for older youth and the adults of any age (it is never to late to start fencing😉)</p>
+        </div>
+        
+        <div id="tabPanel2">
+        <h4>Doetinchem</h4>
+        <p>At Doetinchem study day is <strong>Monday</strong>. There are two groups operating in the city.
+            Group one is for youth, and the training time is from <strong>18:45</strong> to <strong>19:45</strong>
+            Second group is for oder youth and adults. The training time of this group is from <strong>19:45</strong> to <strong>21:15</strong></p>
+        </div>
+        
+        <div id="tabPanel3">
+        <h4>Zutphen</h4>
+        <p><strong>Tuesday
+</strong>is the day to be in Zutphen, if you want to get some fencing practice. In this city we run two fencing groups.
+            Fencing group 1, is for children up to, and inculsive 11 years old. The studying time is from <strong> 18:00 </strong> to <strong> 19:00 </strong>
+            Fencing group 2, is for youth, adults and selected upcoming future talents. This group starts at <strong> 19:00 </strong> and ends in<strong> 21:00 </strong></p>
+        </div>
+        
+            
+       </div>   
+    </div>    
+</aside>
+        
+        
+
+         <footer role="contentinfo" id="contentinfo">
+    
+    <p class="textfooter">Apeldoorn, Netherlands<br>   Wilhelmina Straat 19</p>
+    
+          <a href="https://www.facebook.com/schermvereniging.surtout" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/surtout_nl" class="fa fa-twitter"></a>
+    
+        
+  
+    </footer>     
+
+            <script type="text/javascript">
+//tabbed panels
+
+// declare globals to hold all the links and all the panel elements
+var tabLinks;
+var tabPanels;
+
+window.onload=function() {
+    // when the page loads, grab the li elements
+    tabLinks = document.getElementById("tabs").getElementsByTagName("li");
+	// Now get all the tab panel container divs
+	tabPanels = document.getElementById("containers").getElementsByTagName("div");
+	
+	// activate the _first_ one
+    displayPanel(tabLinks[0]);
+   
+    // attach event listener to links using onclick and onfocus, fire the displayPanel function, return false to disable the link
+    for (var i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].onclick = function() { 
+			displayPanel(this); 
+			return false;
+		}
+        tabLinks[i].onfocus = function() { 
+			displayPanel(this); 
+			return false;
+		}
+    }
+}
+
+function displayPanel(tabToActivate) {
+    // go through all the <li> elements
+    for (var i = 0; i < tabLinks.length; i++) {
+        if (tabLinks[i] == tabToActivate) {
+			// if it's the one to activate, change its class
+            tabLinks[i].classList.add("active");
+			// and display the corresponding panel
+			tabPanels[i].style.display = "block";
+        } else {
+			// remove the active class on the link
+        	tabLinks[i].classList.remove("active");
+			// hide the panel
+			tabPanels[i].style.display = "none";
+        }
+	}
+}
+
+</script>
+        
+    </body>
+        
+        
+    </html>

@@ -1,0 +1,30 @@
+.Terry{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: auto;
+    position: relative;
+    
+}
+.iaminherited{
+    text-align: center;
+   
+    background-color: aquamarine;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+.Jerry{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.Larry{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    
+   
+}
